@@ -1,35 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dhoni</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        img {
-            width: 300px;
-            border-radius: 10px;
-        }
-        p {
-            width: 70%;
-            margin: auto;
-            line-height: 1.6;
-        }
-        h1 {
-            color: darkblue;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS Dhoni | The Legend</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Animated Background */
+body{
+    background: linear-gradient(-45deg, #ffcc00, #ff6600, #ff0000, #ffcc00);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: white;
+}
+
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+    position:fixed;
+    width:100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
+nav h2{
+    font-weight:800;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+    padding-top:80px;
+}
+
+.hero img{
+    width:300px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.5);
+    transition:0.5s;
+}
+
+.hero img:hover{
+    transform: scale(1.05);
+}
+
+.hero h1{
+    font-size:50px;
+    margin-top:20px;
+}
+
+.hero p{
+    max-width:600px;
+    margin:20px auto;
+    font-size:18px;
+}
+
+/* Button */
+.btn{
+    padding:12px 25px;
+    background:black;
+    border:none;
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:black;
+    transform:translateY(-3px);
+}
+
+/* Stats Section */
+.stats{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:60px 20px;
+    gap:30px;
+}
+
+.card{
+    background: rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    width:220px;
+    text-align:center;
+    backdrop-filter: blur(15px);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background: rgba(0,0,0,0.5);
+}
+
+.card h2{
+    font-size:30px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:black;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:35px;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
-<h1>DHONI</h1>
-<hr>
-<img src="dhoni.jpg" alt="Dhoni Image">
-<p>
-Mahendra Singh Dhoni is an Indian professional cricketer...
-</p>
+<!-- Navbar -->
+<nav>
+    <h2>THALA 🦁</h2>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#stats">Stats</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <img src="dhoni.jpg" alt="MS Dhoni">
+    <h1>MS DHONI</h1>
+    <p>
+        The Captain Cool. One of the greatest finishers and leaders in cricket history.
+        Led India to T20 World Cup (2007), ODI World Cup (2011) and Champions Trophy (2013).
+    </p>
+    <button class="btn">Explore More</button>
+</section>
+
+<!-- Stats Section -->
+<section class="stats" id="stats">
+    <div class="card">
+        <h2>2007</h2>
+        <p>T20 World Cup</p>
+    </div>
+    <div class="card">
+        <h2>2011</h2>
+        <p>ODI World Cup</p>
+    </div>
+    <div class="card">
+        <h2>2013</h2>
+        <p>Champions Trophy</p>
+    </div>
+    <div class="card">
+        <h2>IPL</h2>
+        <p>5 Titles</p>
+    </div>
+</section>
+
+<footer>
+    <p>Created with ❤️ by Ratha | Dhoni Fan Page</p>
+</footer>
 
 </body>
 </html>
